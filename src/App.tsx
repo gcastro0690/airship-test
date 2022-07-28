@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    const anyWindow: any = window;
+    anyWindow.UA.then((sdk: any) => {
+      debugger;
+      sdk.getChannel().then((channel: any) => {
+        debugger;
+        console.log('Channel ID: %s', channel.id);
+      });
+    });
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">

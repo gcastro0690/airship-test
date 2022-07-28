@@ -25,6 +25,37 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <script async=false defer=false type="text/javascript">
+      // 86acbd31cd7c09cf30acb66d2fbedc91daa48b86:1659027368.6650352
+      !function(n,r,e,t,c){var i,o="Promise"in n,u={then:function(){return u},catch:function(n){
+      return n(new Error("Airship SDK Error: Unsupported browser")),u}},s=o?new Promise((function(n,r){i=function(e,t){e?r(e):n(t)}})):u
+      ;s._async_setup=function(n){if(o)try{i(null,n(c))}catch(n){i(n)}},n[t]=s;var a=r.createElement("script");a.src=e,a.async=!0,a.id="_uasdk",
+      a.rel=t,r.head.appendChild(a)}(window,document,'https://aswpsdkus.com/notify/v1/ua-sdk.min.js',
+        'UA', {
+          vapidPublicKey: 'BNpnIE4Cb7RaV6JfG3oMFbMy48tEIWzcyRdq38r7Vch_VQ-VXakRjLLWBr8g-zRoW9dyGoad1iXym6pklXu1nk8=',
+          
+          
+          appKey: 'GEkt5ZliRSyjM5hEWnIfiQ',
+          token: 'MTpHRWt0NVpsaVJTeWpNNWhFV25JZmlROnZJdXVqeVcycUxFaklVRmt4NGkxZ1dySERGZTFyY2w4N2MxQm5vODEyaHM'
+        });
+      
+      </script>
+      <!-- In index.html, for example: -->
+<script>
+  // Don't register the service worker
+  // until the page has fully loaded
+  window.addEventListener('load', () => {
+    // Is service worker available?
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/push-worker.js').then(() => {
+        console.log('Service worker registered!');
+      }).catch((error) => {
+        console.warn('Error registering service worker:');
+        console.warn(error);
+      });
+    }
+  });
+</script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
