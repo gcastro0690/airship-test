@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     const anyWindow: any = window;
     anyWindow.UA.then((sdk: any) => {
-      debugger;
+      sdk.register();
       sdk.getChannel().then((channel: any) => {
         debugger;
         console.log('Channel ID: %s', channel.id);
